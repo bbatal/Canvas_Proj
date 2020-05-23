@@ -68,8 +68,8 @@ export class AppComponent {
   @ViewChild('myCanvas2', { static: true })
   myCanvas2: ElementRef<HTMLCanvasElement>;
 
-  @HostListener('click', ['$event'])
-  click(event: MouseEvent) {
+  @HostListener('click', [])
+  click() {
   let count = this.objectItem.length
     if (count > 0) {
       this.objectItem[count-1].switch = false;
